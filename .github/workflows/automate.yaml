@@ -18,14 +18,12 @@ jobs:
         with:
           # Semantic version range syntax or exact version of a Python version
           python-version: '3.11'
-          # Optional - x64 or x86 architecture, defaults to x64
-          architecture: 'x64'
       
-      -name: install dependencies
+      - name: install dependencies
         run: |
         python3 -m pip install --upgrade pip
         pip install pytest
         pip install -r requirements.txt
 
-      -name: run test with pytest
+      - name: run test with pytest
         run: pytest
